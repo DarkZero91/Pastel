@@ -6,29 +6,11 @@
       <xsd:import namespace="http://pastel.defacto.nl/" schemaLocation="WSPastelColorService_schema1.xsd"/>
     </xsd:schema>
   </types>
-  <message name="getHue">
-    <part name="parameters" element="tns:getHue"/>
+  <message name="getHSB">
+    <part name="parameters" element="tns:getHSB"/>
   </message>
-  <message name="getHueResponse">
-    <part name="parameters" element="tns:getHueResponse"/>
-  </message>
-  <message name="getSaturation">
-    <part name="parameters" element="tns:getSaturation"/>
-  </message>
-  <message name="getSaturationResponse">
-    <part name="parameters" element="tns:getSaturationResponse"/>
-  </message>
-  <message name="getLightness">
-    <part name="parameters" element="tns:getLightness"/>
-  </message>
-  <message name="getLightnessResponse">
-    <part name="parameters" element="tns:getLightnessResponse"/>
-  </message>
-  <message name="getAlpha">
-    <part name="parameters" element="tns:getAlpha"/>
-  </message>
-  <message name="getAlphaResponse">
-    <part name="parameters" element="tns:getAlphaResponse"/>
+  <message name="getHSBResponse">
+    <part name="parameters" element="tns:getHSBResponse"/>
   </message>
   <message name="getRGB">
     <part name="parameters" element="tns:getRGB"/>
@@ -36,88 +18,19 @@
   <message name="getRGBResponse">
     <part name="parameters" element="tns:getRGBResponse"/>
   </message>
-  <message name="getBlue">
-    <part name="parameters" element="tns:getBlue"/>
-  </message>
-  <message name="getBlueResponse">
-    <part name="parameters" element="tns:getBlueResponse"/>
-  </message>
-  <message name="getGreen">
-    <part name="parameters" element="tns:getGreen"/>
-  </message>
-  <message name="getGreenResponse">
-    <part name="parameters" element="tns:getGreenResponse"/>
-  </message>
-  <message name="getRed">
-    <part name="parameters" element="tns:getRed"/>
-  </message>
-  <message name="getRedResponse">
-    <part name="parameters" element="tns:getRedResponse"/>
-  </message>
   <portType name="WSPastelColor">
-    <operation name="getHue">
-      <input wsam:Action="http://pastel.defacto.nl/WSPastelColor/getHueRequest" message="tns:getHue"/>
-      <output wsam:Action="http://pastel.defacto.nl/WSPastelColor/getHueResponse" message="tns:getHueResponse"/>
-    </operation>
-    <operation name="getSaturation">
-      <input wsam:Action="http://pastel.defacto.nl/WSPastelColor/getSaturationRequest" message="tns:getSaturation"/>
-      <output wsam:Action="http://pastel.defacto.nl/WSPastelColor/getSaturationResponse" message="tns:getSaturationResponse"/>
-    </operation>
-    <operation name="getLightness">
-      <input wsam:Action="http://pastel.defacto.nl/WSPastelColor/getLightnessRequest" message="tns:getLightness"/>
-      <output wsam:Action="http://pastel.defacto.nl/WSPastelColor/getLightnessResponse" message="tns:getLightnessResponse"/>
-    </operation>
-    <operation name="getAlpha">
-      <input wsam:Action="http://pastel.defacto.nl/WSPastelColor/getAlphaRequest" message="tns:getAlpha"/>
-      <output wsam:Action="http://pastel.defacto.nl/WSPastelColor/getAlphaResponse" message="tns:getAlphaResponse"/>
+    <operation name="getHSB">
+      <input wsam:Action="http://pastel.defacto.nl/WSPastelColor/getHSBRequest" message="tns:getHSB"/>
+      <output wsam:Action="http://pastel.defacto.nl/WSPastelColor/getHSBResponse" message="tns:getHSBResponse"/>
     </operation>
     <operation name="getRGB">
       <input wsam:Action="http://pastel.defacto.nl/WSPastelColor/getRGBRequest" message="tns:getRGB"/>
       <output wsam:Action="http://pastel.defacto.nl/WSPastelColor/getRGBResponse" message="tns:getRGBResponse"/>
     </operation>
-    <operation name="getBlue">
-      <input wsam:Action="http://pastel.defacto.nl/WSPastelColor/getBlueRequest" message="tns:getBlue"/>
-      <output wsam:Action="http://pastel.defacto.nl/WSPastelColor/getBlueResponse" message="tns:getBlueResponse"/>
-    </operation>
-    <operation name="getGreen">
-      <input wsam:Action="http://pastel.defacto.nl/WSPastelColor/getGreenRequest" message="tns:getGreen"/>
-      <output wsam:Action="http://pastel.defacto.nl/WSPastelColor/getGreenResponse" message="tns:getGreenResponse"/>
-    </operation>
-    <operation name="getRed">
-      <input wsam:Action="http://pastel.defacto.nl/WSPastelColor/getRedRequest" message="tns:getRed"/>
-      <output wsam:Action="http://pastel.defacto.nl/WSPastelColor/getRedResponse" message="tns:getRedResponse"/>
-    </operation>
   </portType>
   <binding name="WSPastelColorPortBinding" type="tns:WSPastelColor">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-    <operation name="getHue">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-    </operation>
-    <operation name="getSaturation">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-    </operation>
-    <operation name="getLightness">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-    </operation>
-    <operation name="getAlpha">
+    <operation name="getHSB">
       <soap:operation soapAction=""/>
       <input>
         <soap:body use="literal"/>
@@ -127,33 +40,6 @@
       </output>
     </operation>
     <operation name="getRGB">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-    </operation>
-    <operation name="getBlue">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-    </operation>
-    <operation name="getGreen">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-    </operation>
-    <operation name="getRed">
       <soap:operation soapAction=""/>
       <input>
         <soap:body use="literal"/>
@@ -165,7 +51,7 @@
   </binding>
   <service name="WSPastelColorService">
     <port name="WSPastelColorPort" binding="tns:WSPastelColorPortBinding">
-      <soap:address location="http://127.0.0.1:8080/webservice/WSPastelColor"/>
+      <soap:address location="http://127.0.0.1:8080//webservice/WSPatelColor"/>
     </port>
   </service>
 </definitions>

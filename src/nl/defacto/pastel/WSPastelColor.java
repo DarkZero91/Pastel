@@ -7,43 +7,37 @@ import javax.jws.WebService;
 public class WSPastelColor {
 	private PastelColor pastel = new PastelColor();
 	
+	/**
+	 * Get the HSB values of the color associated with the string value.
+	 * @param value
+	 * @return HSB
+	 */
 	@WebMethod
-	public float getHue(String value) {
-		return pastel.getHue(value);
+	public float[] getHSB(String value) {
+		float[] hsb = new float[3];
+		
+		pastel.generateColor(value);
+		hsb[0] = pastel.getHue() * 360;
+		hsb[1] = pastel.getSaturation() * 100;
+		hsb[2] = pastel.getLightness() * 100;
+		
+		return hsb;
 	}
 	
+	/**
+	 * Get the RGB values of the color associated with the string value.
+	 * @param value
+	 * @return RGB
+	 */
 	@WebMethod
-	public float getSaturation(String value) {
-		return pastel.getSaturation(value);
-	}
-	
-	@WebMethod
-	public float getLightness(String value) {
-		return pastel.getLightness(value);
-	}
-	
-	@WebMethod
-	public int getRGB(String value) {
-		return pastel.getRGB(value);
-	}
-	
-	@WebMethod
-	public int getRed(String value) {
-		return pastel.getRed(value);
-	}
-	
-	@WebMethod
-	public int getGreen(String value) {
-		return pastel.getGreen(value);
-	}
-	
-	@WebMethod
-	public int getBlue(String value) {
-		return pastel.getBlue(value);
-	}
-	
-	@WebMethod
-	public int getAlpha(String value) {
-		return pastel.getAlpha(value);
+	public int[] getRGB(String value) {
+		int[] rgb = new int[3];
+		
+		pastel.generateColor(value);
+		rgb[0] = pastel.getRed();
+		rgb[1] = pastel.getGreen();
+		rgb[2] = pastel.getBlue();
+		
+		return rgb;
 	}
 }
