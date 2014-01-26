@@ -5,6 +5,10 @@
 
   <xs:element name="getHSBResponse" type="tns:getHSBResponse"/>
 
+  <xs:element name="getHex" type="tns:getHex"/>
+
+  <xs:element name="getHexResponse" type="tns:getHexResponse"/>
+
   <xs:element name="getRGB" type="tns:getRGB"/>
 
   <xs:element name="getRGBResponse" type="tns:getRGBResponse"/>
@@ -18,6 +22,18 @@
   <xs:complexType name="getRGBResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getHex">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getHexResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
 

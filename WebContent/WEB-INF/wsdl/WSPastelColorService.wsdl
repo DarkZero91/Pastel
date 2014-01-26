@@ -12,6 +12,12 @@
   <message name="getHSBResponse">
     <part name="parameters" element="tns:getHSBResponse"/>
   </message>
+  <message name="getHex">
+    <part name="parameters" element="tns:getHex"/>
+  </message>
+  <message name="getHexResponse">
+    <part name="parameters" element="tns:getHexResponse"/>
+  </message>
   <message name="getRGB">
     <part name="parameters" element="tns:getRGB"/>
   </message>
@@ -23,6 +29,10 @@
       <input wsam:Action="http://pastel.defacto.nl/WSPastelColor/getHSBRequest" message="tns:getHSB"/>
       <output wsam:Action="http://pastel.defacto.nl/WSPastelColor/getHSBResponse" message="tns:getHSBResponse"/>
     </operation>
+    <operation name="getHex">
+      <input wsam:Action="http://pastel.defacto.nl/WSPastelColor/getHexRequest" message="tns:getHex"/>
+      <output wsam:Action="http://pastel.defacto.nl/WSPastelColor/getHexResponse" message="tns:getHexResponse"/>
+    </operation>
     <operation name="getRGB">
       <input wsam:Action="http://pastel.defacto.nl/WSPastelColor/getRGBRequest" message="tns:getRGB"/>
       <output wsam:Action="http://pastel.defacto.nl/WSPastelColor/getRGBResponse" message="tns:getRGBResponse"/>
@@ -31,6 +41,15 @@
   <binding name="WSPastelColorPortBinding" type="tns:WSPastelColor">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
     <operation name="getHSB">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="getHex">
       <soap:operation soapAction=""/>
       <input>
         <soap:body use="literal"/>
@@ -51,7 +70,7 @@
   </binding>
   <service name="WSPastelColorService">
     <port name="WSPastelColorPort" binding="tns:WSPastelColorPortBinding">
-      <soap:address location="http://127.0.0.1/webservice/WSPastelColor"/>
+      <soap:address location="http://127.0.0.1:8080/webservice/WSPastelColor"/>
     </port>
   </service>
 </definitions>

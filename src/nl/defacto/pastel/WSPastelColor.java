@@ -40,4 +40,15 @@ public class WSPastelColor {
 		
 		return rgb;
 	}
+	
+	/**
+	 * Get the Hex value of the color associated with the string value.
+	 * @param value
+	 * @return Hex
+	 */
+	@WebMethod
+	public String getHex(String value) {
+		pastel.generateColor(value);
+		return pastel.getHex();
+	}
 }

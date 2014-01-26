@@ -46,4 +46,16 @@ public class PastelColor {
 	public int getBlue() {
 		return color.getBlue();
 	}
+	
+	// Hex
+	
+	public String getHex() {
+		String hex = new String();
+		
+		hex += Integer.toHexString(getRed());
+		hex += Integer.toHexString(getGreen());
+		hex += Integer.toHexString(getBlue());
+				
+		return "#" + hex.toUpperCase();
+	}
 }
