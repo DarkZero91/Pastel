@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://pastel.defacto.nl/" xmlns:tns="http://pastel.defacto.nl/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="getAlpha" type="tns:getAlpha"/>
+
+  <xs:element name="getAlphaResponse" type="tns:getAlphaResponse"/>
+
+  <xs:element name="getBlue" type="tns:getBlue"/>
+
+  <xs:element name="getBlueResponse" type="tns:getBlueResponse"/>
+
+  <xs:element name="getGreen" type="tns:getGreen"/>
+
+  <xs:element name="getGreenResponse" type="tns:getGreenResponse"/>
+
+  <xs:element name="getHue" type="tns:getHue"/>
+
+  <xs:element name="getHueResponse" type="tns:getHueResponse"/>
+
+  <xs:element name="getLightness" type="tns:getLightness"/>
+
+  <xs:element name="getLightnessResponse" type="tns:getLightnessResponse"/>
+
+  <xs:element name="getRGB" type="tns:getRGB"/>
+
+  <xs:element name="getRGBResponse" type="tns:getRGBResponse"/>
+
+  <xs:element name="getRed" type="tns:getRed"/>
+
+  <xs:element name="getRedResponse" type="tns:getRedResponse"/>
+
+  <xs:element name="getSaturation" type="tns:getSaturation"/>
+
+  <xs:element name="getSaturationResponse" type="tns:getSaturationResponse"/>
+
+  <xs:complexType name="getRGB">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getRGBResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAlpha">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAlphaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getHue">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getHueResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:float"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getBlue">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getBlueResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getRed">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getRedResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getGreen">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getGreenResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getLightness">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getLightnessResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:float"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getSaturation">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getSaturationResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:float"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
