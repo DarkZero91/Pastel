@@ -13,13 +13,13 @@ public class WSPastelColor {
 	 * @return HSB
 	 */
 	@WebMethod
-	public float[] getHSB(String value) {
-		float[] hsb = new float[3];
+	public int[] getHSB(String value) {
+		int[] hsb = new int[3];
 		
 		pastel.generateColor(value);
-		hsb[0] = pastel.getHue() * 360;
-		hsb[1] = pastel.getSaturation() * 100;
-		hsb[2] = pastel.getLightness() * 100;
+		hsb[0] = Math.round(pastel.getHue() * 360);
+		hsb[1] = Math.round(pastel.getSaturation() * 100);
+		hsb[2] = Math.round(pastel.getLightness() * 100);
 		
 		return hsb;
 	}

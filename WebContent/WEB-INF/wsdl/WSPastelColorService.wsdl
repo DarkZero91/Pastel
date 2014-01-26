@@ -51,7 +51,7 @@
   </binding>
   <service name="WSPastelColorService">
     <port name="WSPastelColorPort" binding="tns:WSPastelColorPortBinding">
-      <soap:address location="http://127.0.0.1:8080//webservice/WSPatelColor"/>
+      <soap:address location="http://127.0.0.1/webservice/WSPastelColor"/>
     </port>
   </service>
 </definitions>

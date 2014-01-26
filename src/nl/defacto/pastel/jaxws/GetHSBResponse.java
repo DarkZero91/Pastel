@@ -13,14 +13,14 @@ import javax.xml.bind.annotation.XmlType;
 public class GetHSBResponse {
 
     @XmlElement(name = "return", namespace = "", nillable = true)
-    private float[] _return;
+    private int[] _return;
 
     /**
      * 
      * @return
-     *     returns float[]
+     *     returns int[]
      */
-    public float[] getReturn() {
+    public int[] getReturn() {
         return this._return;
     }
 
@@ -29,7 +29,7 @@ public class GetHSBResponse {
      * @param _return
      *     the value for the _return property
      */
-    public void setReturn(float[] _return) {
+    public void setReturn(int[] _return) {
         this._return = _return;
     }
 
